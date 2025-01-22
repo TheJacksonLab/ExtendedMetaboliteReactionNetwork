@@ -40,7 +40,7 @@ def tsne_calc(fps_array):
     pca_50 = PCA(n_components=50)
     crds_50 = pca_50.fit_transform(fps_array)
     
-    %time crds_embedded = openTSNE.TSNE(n_components=2, perplexity=70, verbose=True, n_iter=3000).fit(crds_50)
+    %time crds_embedded = openTSNE.TSNE(n_components=2, perplexity=200, verbose=True, n_iter=3000).fit(crds_50)
     crds_tsne_df = pd.DataFrame(crds_embedded,columns=["X","Y"])
 
     return crds_tsne_df
