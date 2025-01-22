@@ -75,6 +75,7 @@ def emrn_reactant_matching(met_smi, reac_series_can, unique_id_reac_df, id_reac)
             p_list.extend(prod_lists.values[i])
 
     # Dataframe to store reactant, product, reaction index
+    # We write the Metabolite-derived reactant column as 'Met-reactant' in the rounds database
     r_net_df = pd.DataFrame({'Met_reactant': r_list, 'Product': p_list, 'Rxn_idx': id_list})
     # Removing reactions which have same molecule on reactant and product side
     r_net_df_filt = r_net_df.loc[~r_net_df['Rxn_idx'].isin(r_net_df.loc[r_net_df['Met_reactant']==r_net_df['Product']]['Rxn_idx'])]
