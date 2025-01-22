@@ -19,28 +19,28 @@ _E. coli_ metabolite database. Downloaded from [ECMDB](https://ecmdb.ca/).
 **2. yeast_detected_and_quantified.csv**
 _S. cerevisiae_ metabolite database. Downloaded from [YMDB](https://www.ymdb.ca/). Only included metabolites that have been Detected and Quantified.
 
-**PaMet.xlsx**
+**3. PaMet.xlsx**
 _P. aeruginosa_ metabolite database. Downloaded from [PAMDB](http://pseudomonas.umaryland.edu/).
 
-**met_all_noMW_common.csv**
+**4. met_all_noMW_common.csv**
 Output database after combining and filtering the metabolite databases (Metabolite_db_gen/metabolite_df_generaton.py)
 
-**USPTO_FULL.csv**
+**5. USPTO_FULL.csv**
 The complete USPTO reaction database.
 
-**identified_reactants.csv**
+**6. identified_reactants.csv**
 USPTO database after carrying out reaction role mapping to separate the reactants and reagents in the reaction SMILES. Code implemented from [https://github.com/rdkit/rdkit/tree/master/Contrib/RxnRoleAssignment](https://github.com/rdkit/rdkit/tree/master/Contrib/RxnRoleAssignment).
 
-**id_reac_final.csv**
+**7. id_reac_final.csv**
 USPTO database after filtering (EMRN_gen/USPTO_filtering_for_EMRN.py). Used for final EMRN generation.
 
-**metr_sus_df.csv**
+**8. metr_sus_df.csv**
 Database of all molecules in EMRN tagged with which round they are formed in first.
 
-**sus_rxn5.csv**
+**9. sus_rxn5.csv**
 Database of all the reactions in EMRN. Columns are Met_reactant (metabolite-based reactant in the reaction), Product (product formed in the reaction), Rxn_idx (reaction index based on the index of the given reaction in id_reac), Round (reaction round).
 
-**OMG_monomers.csv, OMG_polymers.csv**
+**10. OMG_monomers.csv, OMG_polymers.csv**
 Open Macromolecular Genome databases. Downloaded from [https://zenodo.org/records/7556992](https://zenodo.org/records/7556992).
 
 ## 1. Metabolite_db_gen
